@@ -1,0 +1,84 @@
+/*
+Theme Name: h5b
+Theme URI: http://q21.co/h5b-theme
+Description: A minimalist HTML5 boilerplate theme for WordPress.
+Author: rfair404
+Author URI: http://q21.co/about-rfair
+Version: 1.0
+Tags: grey, two-columns, fixed-width, custom-header, custom-background, minimalist, developer-friendly, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu, html5, boilerplate
+
+License: GPL
+
+
+
+*/
+
+/* the main layout and widths */
+#container {width:1040px; margin:0 auto; display:block;}
+header#primary-header, section#main, footer#primary-footer {float:left; clear:left; width:1020px;}
+#maincol {width:600px; float:left;}
+#altcol {width:400px; float:left; margin-left:20px;}
+footer#primary-footer {float:left; clear:left; width:1020px;}
+
+/* the colors and gradients*/
+body {color: #E3D7BF; font: 300 16px/1.5 "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue", sans-serif; }
+#container {background:#444;}
+header#primary-header, section#main, footer#primary-footer {background:#c4c4c4; padding:10px; }
+header#primary-header, section#main {border:1px solid #445445;}
+header#primary-header {border-bottom:0px; margin-top:20px;background: #232927;}
+section#main {border-top:none; margin-bottom:20px; background: #232927;}
+footer#primary-footer {background: black;}
+
+/* the header and branding */
+h1#site-title:before {content:"\2605 \ ";}
+h1#site-title:after {content:"\ \2605";}
+h1#site-title {font-size:3em; text-align:center; font-family: "MolotRegular", Arial, sans-serif; text-shadow: 1px 1px 0px black, 2px 2px 0px #476871, 3px 3px 0px #476871, 4px 4px 0px #476871, 5px 5px 0px #476871, 6px 6px 0px #476871, 7px 7px 0px #476871; color:#E3D7BF;}
+h1#site-title a, h1#site-title a:visited {color:#E3D7BF; text-decoration:none;}
+h1#site-title a:hover {color:#E16734; text-decoration:none;}
+p#site-description {text-align:center; color:#E3D7BF; font-size:2em;}
+
+/* the header nav menus */
+header#primary-header nav ul li {display:inline-block;}
+header#primary-header nav.header-primary ul, header#primary-header nav.header-secondary ul {text-align:center; width:100%; display:block;}
+header#primary-header nav.header-primary ul li .sub-menu, header#primary-header nav.header-secondary ul li .sub-menu {display:none; /*hide the submenus on nav till a js solution is implemented */}
+header#primary-header nav.header-primary ul li {padding:0 10px;}
+header#primary-header nav.header-primary ul li a {text-decoration:none;}
+header#primary-header nav.header-primary ul li a span.item-title {background:rgba(225, 103, 52, 0.6); padding:0 10px; display:block; border: 1em solid; border-color: transparent #232927; border-width: 1.3em; height:0px; color: #E3D7BF; line-height:0em; text-decoration:none;}
+header#primary-header nav.header-primary ul li a span.item-description {color:#E3D7BF; text-transform:uppercase; font-size:.8em;}
+header#primary-header nav.header-secondary ul { clear:left; width:400px; margin:20px auto 0;}
+header#primary-header nav.header-secondary ul li {display:initial; width:200px; color:#fff; }
+header#primary-header nav.header-secondary ul li a {color:#E16734;}
+header#primary-header nav.header-secondary ul li:after {content:' \ \2605';}
+
+/* headings and titles */
+.entry :h1, .entry h2, .entry h3, .entry h4 {font-size: 1.2em; margin: 25px 0 10px; text-shadow: 1px 1px 0px black, 2px 2px 0px #476871, 3px 3px 0px #476871;}
+h1.title {font-size:3em; font-family: "MolotRegular", Arial, sans-serif; text-shadow: 1px 1px 0px black, 2px 2px 0px #476871, 3px 3px 0px #476871, 4px 4px 0px #476871, 5px 5px 0px #476871, 6px 6px 0px #476871, 7px 7px 0px #476871; color:#E3D7BF; margin:0px;}
+
+/* post authors, date and meta */
+span.meta {font-size: 70%;margin: 0 0 2em;display: block;text-transform: uppercase;}
+
+/* the post type and post format styles */
+.format-standard {}
+.format-gallery {}
+.format-quote p{font-size:3em; font-family: times, serif; }
+.format-quote p:first-child:before {content:'\201C';}
+.format-quote p:last-child:after {content:'\201D';} 
+.home .format-quote header.entry-header, .home .format-quote footer.entry-footer, .archive .format-quote header.entry-header, .archive .format-quote footer.entry-footer  {display:none;}
+
+/* the comments */
+section.comments {border:1px solid #ccc; padding:10px;}
+section.comments #respond label {}
+section.comments #respond input, section.comments #respond textarea {width:450px; float:right;}
+section.comments #respond .form-allowed-tags {clear:both; padding:10px 10px 10px 150px;}
+section.comments #respond p.form-submit input {width:150px;}
+
+/*the footer menus */
+footer#primary-footer nav ul li {display:inline-block;}
+footer#primary-footer nav ul li a {color:white;}
+
+/* footer branding copyright etc */
+p#site-copyright {float:left;}
+p#gotop {float:right;}
+p#gotop a:after {content:'\ \2191';}
+p#site-copyright a, p#gotop a {color:white;}
+p#site-copyright a:before {content:'\00A9 \ ';}
