@@ -1,14 +1,16 @@
 /*
-Theme Name: q21
-Theme URI: http://q21.co/q21-theme
+Theme Name: Blank Child for h5b
+Theme URI: http://q21.co/blank-child-h5b-theme
 Description: A minimalist HTML5 boilerplate theme for WordPress.
 Author: rfair404
 Author URI: http://q21.co/about-rfair
-Version: 0.0.5
+Version: 0.0.0
 Tags: grey, two-columns, fixed-width, custom-header, custom-background, minimalist, developer-friendly, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu, html5, boilerplate
-
+Template: h5b
 License: GPL
 
-@package q21
+@package h5b
+@package blank-child-h5b
 */
 
+/* To use the blank child theme move it into the wp-content/themes directory (up one level) */

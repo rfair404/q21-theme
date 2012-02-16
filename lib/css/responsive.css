@@ -1,0 +1,118 @@
+/*responsive css? */
+
+/*all*/
+#container {
+	max-width:100%;
+	margin:0 auto;
+}
+header#primary-header, section#main, footer#primary-footer {
+	max-width:100%;
+	clear:both;
+}
+header#primary-header {
+    padding:0 5% 1em;
+}
+section#main {
+    float:left;
+    padding: 1em 5%;
+}
+footer#primary-footer {
+    padding:1em 5% 0;
+}
+/*header branding*/
+hgroup#top-branding {
+        clear:both; 
+}
+h1#site-title {
+	float:left;
+	display:block;
+	margin:0 1% 0 0;
+	text-align:center;
+	font-size:2em;
+}
+h2#site-description {
+	float:left;
+	display:block;
+	margin: 0;
+	text-align:center;
+        font-size: 2em;
+        line-height:2em;
+}
+h1#site-title a, h2#site-description a {
+	margin:0 auto;
+}
+/*header nav*/
+nav.header-primary {
+	float:right;
+}
+nav.header-primary ul li {
+	display:inline;
+}
+nav.header-secondary {
+	clear:both;
+}
+nav.header-secondary ul li {
+	display:inline;
+	padding:0 1%;
+	width:10%;
+}
+nav.header-primary li ul.sub-menu, nav.header-secondary li ul.sub-menu {
+	display:none;
+}
+nav.header-primary li a span.item-description {
+	display:none;
+}
+/*featured area*/
+div#featured-area {
+        clear:both;
+}
+div#featured-area .widget {
+	width: 100%; 
+	height:auto;
+            
+}
+/*content area*/ 
+section#maincol {
+	float:left;
+	max-width:70%;
+}
+section#secondcol {
+	float:left;
+        max-width:25%;
+        margin-left:5%;
+}
+section.inner ul {
+	margin:0;
+	padding:0 0 0 10%;
+}
+/*footer nav*/
+nav.footer-primary {	
+	width:100%;
+}
+nav.footer-primary ul ul{
+	display:none;
+}
+nav.footer-primary ul li {
+	display:inline;
+}
+nav.footer-secondary {  
+    text-align:right;
+}
+nav.footer-secondary ul ul {
+	display:none;
+}
+nav.footer-secondary ul li {
+	display:inline;}
+/*footer branding */
+hgroup#footer-branding {
+	text-align:left;
+}
+hgroup#footer-branding p {
+	max-width:100%;
+}
+
+/* misc */
+textarea {
+        max-width: 100%;
+}
+

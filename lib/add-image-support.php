@@ -1,4 +1,8 @@
-<?php /* set wordpress theme settings here */
+<?php 
+/*
+* Set up a few WordPress theme options like image size and enables background iamge support
+* @package h5b
+*/ 
 
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images /*2011*/
 	add_theme_support( 'post-thumbnails' );

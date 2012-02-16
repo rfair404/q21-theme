@@ -1,4 +1,9 @@
-<?php /* nav menus file */
+<?php 
+/*
+*Sets up the navigation menus
+* @package h5b
+* includes our 'descriptions' custom walker allowing menus to display item descriptions - e.g. <?php h5b_menu('header_primary', 'header-primary', 'descriptions'); ?>
+*/ 
 
 /*make our top nav menu */
 register_nav_menus( array(
@@ -9,13 +14,13 @@ register_nav_menus( array(
 'header_secondary' => __( 'Header Secondary', 'header-secondary' ), )
 );
 
-register_nav_menus( array(
+/*register_nav_menus( array(
 'sidebar_primary' => __( 'Sidebar Primary', 'sidebar-primary' ), )
 );
 
 register_nav_menus( array(
 'sidebar_secondary' => __( 'Siedbar Secondary', 'sidebar-secondary' ), )
-);
+);*/
 
 register_nav_menus( array(
 'footer_primary' => __( 'Footer Primary', 'footer-primary' ), )

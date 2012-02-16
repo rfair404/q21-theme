@@ -1,7 +1,7 @@
 <?php 
 
 /*
-* The Main Index File
+* The Taxonomy Template
 * @package h5b
 * Maintain for WordPress theme structure compatability
 */
