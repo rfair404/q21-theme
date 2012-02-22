@@ -6,51 +6,57 @@
         Make theme colorful, keep widths etc elsewhere
 */
 
-/* the candy color scheme
-tan: #ffdb83
-pink #ff9783
-dark blue: #2cb6a4
-light blue: #87e0fd
+/*
+red : #ff0000
+green : #9fee00
+blue : #009999
 */
 
+body {
+    background: whitesmoke;
+    background: black url(../images/bg1.jpg) fixed;
+}
+
 #container {
-    background: #f6f6f6;
-    box-shadow:0 0 5em #c4c4c4;
+    /*background: #121212;*/
+    
 }
 
 /*header / footer section */
 
-header#primary-header, footer#primary-footer {
-    background: #ffdb83;
+header#primary-header {
+   /* background: #010101;*/
 }
+
+header#primary-header #featured-area .widget {
+    
+     box-shadow:0 0 5em black;
+     background: black url(../images/bg1.jpg);
+}
+
  /* main section */
  section#main {
-     background: whitesmoke;
+     box-shadow:0 0 5em black;
+     background: black url(../images/bg1.jpg);
  }
-/*primary nav*/
+ footer#primary-footer {
+     
+ }
+ /*primary nav*/
 nav.header-primary ul li {
-background: black;
-    float:left;
-    padding:1% 3%;
-    box-shadow: 0em 0em 1em #f4f4f4;
+    background: #4c4c4c;
+}
+nav.header-primary ul {
+     background: #4c4c4c;
 }
 nav.header-primary ul li:hover, nav.header-primary ul li.current-menu-item {
-background: rgb(125,126,125);
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkN2U3ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZTBlMGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1)));
-background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
-background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
-background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
-background: linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 );
-
+    background: #c4c4c4;
 }
 nav.header-primary ul li:first-child {
-    border-radius: 0 0 0 1em;
+
 }
 nav.header-primary ul li:last-child {
-    border-radius: 0 0 1em 0;
+
 }
 nav.header-primary ul li a {
     color:#f4f4f4;
@@ -60,42 +66,62 @@ nav.header-primary ul li:hover a, nav.header-primary ul li.current-menu-item a {
     color: #fff;
     
 }
-
+nav.header-secondary {
+    background: black;
+}
+nav.header-secondary ul li {
+    background: black;
+}
+nav.header-secondary ul {
+     background: black;
+}
 /* branding section*/
 
 h1#site-title a {
-    color: #87e0fd;
+    color: #009999;
     text-decoration: none;
     
 }
 h2#site-description {
-    color: white;
+    color: whitesmoke;
 }
 
 
 /*misc color areas*/
 p {
-    color: #444;
+    color: whitesmoke;
 }
 a, a:visited, a:focus {
-    color: #ff9783;
+    color: whitesmoke;
 }
 a:hover, a:blur {
-    color: #ff7400;
+    color: #9fee00;
 }
 h1, h2, h3, h4, h5 {
-    color: #2cb6a4;
+    color: #009999;
 }
-/*playing with webkit and fun css3 stuff*/
-h1#site-title a {
-    display:block; 
+h2.title a {
+    color: #ff0000;
 }
-h1#site-title a:first-letter {
+.meta, .widget {
     color: #c4c4c4;
-    text-shadow: 0em 0em 0.3em #c4c4c4;
-    text-transform: uppercase;
-	
 }
+#secondcol .widget {
+    border:1px solid black;
+    background: #111;
+        	-webkit-box-shadow: 0 8px 6px -6px white;
+	   -moz-box-shadow: 1px 1px 1px 1px #121212;
+	        box-shadow: 1px 1px 1px 1px #121212;
+
+}
+#secondcol .widget .widgettitle {
+        background: #222;
+        border-bottom:1px solid black;
+
+}
+
+/*playing with webkit and fun css3 stuff*/
+
 .meta .edit-link {
     display:block; 
     transform: rotate(180deg);
@@ -111,3 +137,9 @@ margin:0;
     content: "\2198";
     color: #c4c4c4;
 }
+#maincol:even-child  {
+       background-color: black;    
+}
+hgroup#footer-branding a, #hgroup#footer-branding a:visited {
+    color: #9fee00; 
+} 

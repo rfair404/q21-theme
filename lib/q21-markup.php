@@ -6,7 +6,6 @@
 */
 
 /**************the header items******************************/
-
 // do doctype and conditional css files per html5boilerplate
 add_action('q21_html_start', 'q21_doctype_tags', 0);
 function q21_doctype_tags() { ?>
@@ -29,8 +28,8 @@ function q21_head_elements() { ?>
 //complete head
 add_action('q21_head_end', 'q21_head_elements_close', 99);
 function q21_head_elements_close() { ?>
-	<link rel="icon" href="<?php echo q21_IMG_URL; ?>/favicon.ico" />
-	<link rel="apple-touch-icon" href="<?php echo q21_IMG_URL; ?>/apple-touch-icon.png" />
+	<link rel="icon" href="<?php echo Q21_IMG_URL; ?>/favicon.ico" />
+	<link rel="apple-touch-icon" href="<?php echo Q21_IMG_URL; ?>/apple-touch-icon.png" />
 	<?php wp_head(); ?>
 	</head>
 <?php }
@@ -44,7 +43,7 @@ function q21_head_elements_close() { ?>
 //start div#container
 add_action('q21_body_start', 'q21_body_container_tag', 10);
 function q21_body_container_tag() { ?>
-	<div id="container" class="container_12">
+	<div id="container" class="contain">
 <?php }
 
 //complete div#container
@@ -56,9 +55,9 @@ function q21_body_container_tag_close() { ?>
 //start header#primary-header
 add_action('q21_header_start', 'q21_header_primary_start', 0);
 function q21_header_primary_start() { ?>
-	<header id="primary-header" class="primary" role="main" class="container_12">
-	<?php get_template_part( q21_NAME, 'top' ); ?>
-	<?php get_template_part( q21_NAME, 'featured' ); ?>
+	<header id="primary-header" class="primary" role="main" class="contain">
+	<?php get_template_part( 'top', q21_template_context() ); ?>
+	<?php get_template_part( 'featured', q21_template_context() ); ?>
 <?php }
 
 //complete header#primary-header
@@ -72,22 +71,22 @@ function q21_header_primary_end() { ?>
 //start content wrapper
 add_action('q21_content_start', 'q21_section_primary_start', 0);
 function q21_section_primary_start() { ?> 
-	<section id="main" role="main" class="primary" class="container_12">
+	<section id="main" role="main" class="primary" class="contain">
 <?php }
 
 //start main col wrapper with loop !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! important has loop
 add_action('q21_content_start', 'q21_section_maincol', 10);
 function q21_section_maincol() { ?> 
-	<section id="maincol" class="inner grid_8" role="main" >
-	<?php get_template_part('q21','loop'); ?>
+	<section id="maincol" class="inner" role="main" >
+	<?php get_template_part( 'loop', q21_template_context() ); ?>
 	</section><!--/#maincol -->
 <?php }
 
 //start second col wrapper with sidebar !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! important has sidebar
 add_action('q21_content_start', 'q21_section_secondcol', 10);
 function q21_section_secondcol() { ?> 
-	<section id="secondcol" class="inner grid_3" role="complementary">
-	<?php get_template_part('q21', 'sidebar'); ?>
+	<section id="secondcol" class="inner" role="complementary">
+	<?php get_template_part( 'sidebar', q21_template_context() ); ?>
 	</section><!--/#secondcol -->
 <?php }
 
@@ -141,8 +140,11 @@ function q21_post_content() { ?>
 add_action('q21_each_post', 'q21_post_footer', 20);
 function q21_post_footer() { ?> 
 	<footer class="entry-footer">
-		<span class="meta"><?php
-			//stolen from 2011 => janky but good enough
+		<span class="meta">
+    
+    
+    <?php 
+			//stolen from 2011 => janky but good enough for now
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'q21' ) );
                         $utility_text = null;
@@ -196,7 +198,7 @@ function q21_show_pagination() { ?>
 add_action('q21_footer_start', 'q21_footer_primary_start', 0);
 function q21_footer_primary_start() { ?>
 	<footer id="primary-footer" class="primary">
-<?php get_template_part( 'q21', 'bottom' ); ?>
+<?php get_template_part( 'bottom', q21_template_context() ); ?>
 <?php }
 
 //complete footer markup

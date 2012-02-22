@@ -6,18 +6,19 @@
  * 
  */
 
-add_action('Q21_before_init', 'Q21_preload_constants');
+add_action('q21_before_init', 'q21_preload_constants');
 
-function Q21_preload_constants() {
+function q21_preload_constants() {
     
 /*First THEME CONSTANTS HERE  **/
-define( 'Q21_NAME', 'q21' );
+if ( !defined( 'Q21_NAME' )  ) 
+    define( 'Q21_NAME', 'q21' );
 define( 'Q21_URL', get_template_directory_uri() );
 define( 'Q21_DIR', get_template_directory() );
 define( 'Q21_LIB_DIR', Q21_DIR.'/lib' );
 define( 'Q21_CSS_URL', Q21_URL.'/lib/css' );
 define( 'Q21_JS_URL', Q21_URL.'/lib/js' );
-define( 'Q21_IMG_URL', Q21_URL.'/images' );
+define( 'Q21_IMG_URL', Q21_URL.'/lib/images' );
 define( 'Q21_VER', '025' ); /* for enquing cachable files */
 define( 'Q21_TRANS_VER', '025' ); /* for transiend cache clearing capability */
 
@@ -26,11 +27,13 @@ define( 'CHILD_DIR', get_stylesheet_directory() );
 
 }
 
-add_action('Q21_before_init', 'Q21_load_helperfiles');
+add_action('q21_before_init', 'q21_load_helperfiles');
 function Q21_load_helperfiles(){
+    
+include_once( Q21_LIB_DIR . '/function-support.php');
 
 /*include out options page*/
-include_once( Q21_DIR . '/theme-options.php' );
+include_once( Q21_LIB_DIR . '/theme-options.php' );
 
 /*set featured images sizes*/
 include_once( Q21_LIB_DIR . '/add-image-support.php' );
@@ -58,13 +61,14 @@ include_once( Q21_LIB_DIR . '/q21-markup.php' );
 
 }
 
-add_action('Q21_init', 'Q21_load_q21');
-function Q21_load_q21() {
+add_action('q21_init', 'q21_load_q21');
+function q21_load_q21() {
 	/** Load Framework */
 	require_once( Q21_LIB_DIR . '/q21-core.php' );
 }
 
-do_action('Q21_before_init');
-do_action('Q21_init');
-do_action('Q21_child_init');
+do_action('q21_before_init');
+do_action('q21_init');
+do_action('q21_child_init');
+do_action('after_child_init');
 

@@ -2,11 +2,11 @@
 
 /*
 * The Main footer
-* @package h5b
+* @package q21
 */ 
 
-do_action ( 'h5b_footer_start' );	
-do_action ( 'h5b_footer_end' ); 
+do_action ( 'q21_footer_start' );	
+do_action ( 'q21_footer_end' ); 
 wp_footer(); 
-do_action ( 'h5b_body_end' ); 
-do_action ( 'h5b_html_end' ); 
+do_action ( 'q21_body_end' ); 
+do_action ( 'q21_html_end' ); 

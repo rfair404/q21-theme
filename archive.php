@@ -6,4 +6,4 @@
 * Maintain for WordPress theme structure compatability
 */
 
-h5b();
+q21();

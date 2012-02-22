@@ -1,7 +1,7 @@
 <?php 
 /*
 * Set up a few WordPress theme options like image size and enables background iamge support
-* @package h5b
+* @package q21
 */ 
 
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images /*2011*/

@@ -1,20 +1,23 @@
-/*responsive css? */
+/* following rules apply to everything */
 
 /*all*/
 #container {
-	max-width:100%;
+	width:100%;
 	margin:0 auto;
 }
 header#primary-header, section#main, footer#primary-footer {
-	max-width:100%;
+	width:100%;
 	clear:both;
 }
 header#primary-header {
-    padding:0 5% 1em;
+    padding:0 0 1em;
+    margin-bottom:2%;
+
 }
 section#main {
     float:left;
-    padding: 1em 5%;
+    padding: 0 2% 2%;
+    margin:2% 0;
 }
 footer#primary-footer {
     padding:1em 5% 0;
@@ -27,14 +30,15 @@ h1#site-title {
 	float:left;
 	display:block;
 	margin:0 1% 0 0;
-	text-align:center;
+	text-align:left;
 	font-size:2em;
+        line-height:2em;
 }
 h2#site-description {
 	float:left;
 	display:block;
 	margin: 0;
-	text-align:center;
+	text-align:left;
         font-size: 2em;
         line-height:2em;
 }
@@ -47,17 +51,38 @@ nav.header-primary {
 }
 nav.header-primary ul li {
 	display:inline;
+            padding: .5em 1em;
+    margin: 0;
+    float:left;
 }
 nav.header-secondary {
 	clear:both;
+        margin: 2% 0;
+        float:left;
+        width:100%;
 }
 nav.header-secondary ul li {
-	display:inline;
-	padding:0 1%;
-	width:10%;
+	display:inline-block;
+	padding:.5em 1em;
+        float:left;
+	/*width:18%;*/
+    margin: 0;
+    float:left;
 }
 nav.header-primary li ul.sub-menu, nav.header-secondary li ul.sub-menu {
 	display:none;
+        position: absolute;
+        width:20%;
+        margin-left:-1em;
+        margin-top: .5em;
+        padding: 0 1em;
+}
+nav.header-primary li ul.sub-menu li, nav.header-secondary li ul.sub-menu li {
+	width:90%;
+        padding:1em 5%;
+}
+nav.header-primary li:hover ul.sub-menu, nav.header-secondary li:hover ul.sub-menu{
+    display: block;
 }
 nav.header-primary li a span.item-description {
 	display:none;
@@ -67,18 +92,27 @@ div#featured-area {
         clear:both;
 }
 div#featured-area .widget {
-	width: 100%; 
+	width:24%;
+        margin-right:1%;
 	height:auto;
-            
+        display:inline-block; 
+        float:left;
+}
+div#featured-area .widget:nth-child(4n+4) {   
+    margin-right:0;
+        width: 25%;
+}
+div#featured-area .widget:nth-child(4n+5) {  
+    clear:left;
 }
 /*content area*/ 
 section#maincol {
 	float:left;
-	max-width:70%;
+	width:70%;
 }
 section#secondcol {
 	float:left;
-        max-width:25%;
+        width:25%;
         margin-left:5%;
 }
 section.inner ul {
@@ -115,4 +149,210 @@ hgroup#footer-branding p {
 textarea {
         max-width: 100%;
 }
+.hentry {
+    margin-bottom:4em;
+    /*padding:1em;*/
+}
+aside.next-post-link {
+    float:left;
+    margin-left:1em;
+}
+aside.prev-post-link {
+    float:right;
+    margin-right: 1em;
+}
 
+/*sidebar */
+.widget {
+        margin-top:1em;
+        width:100%;
+}
+#secondcol .widget div, #secondcol .widget ul {
+    padding:1em;
+}
+#secondcol .widget ul li {
+    margin-left:1em;
+}
+.widget .widgettitle {
+    padding: 1em;
+    margin: 0;
+}
+.widget div, .widget ul {
+    padding: 1em;
+}
+.widget ul li {
+    margin-left: 1em;
+} 
+
+
+/* start media queries section */
+/* wide desktop devices only please */
+@media screen and (min-width:1440px){
+            #container {
+                max-width:60%;
+                margin: 0 20%;
+                padding: 0;
+        }
+        header#primary-header, section#main, footer#primary-footer {
+
+        }
+
+        h1#site-title {
+                float:left;
+                display:block;
+                margin:0 1% 0 0;
+                text-align:left;
+                font-size:4em;
+                line-height:1em;
+        }
+        h2#site-description {
+                float:left;
+                display:block;
+                margin: 0;
+                text-align:left;
+                font-size: 2em;
+                line-height:2em;
+        }   
+}
+
+/* small desktop devices only please */
+@media screen and (max-width:1440px),(max-width:1024px){
+        #container {
+                width:80%;
+                margin: 0 10%;
+                padding: 0;
+        }
+        header#primary-header, section#main, footer#primary-footer {
+
+        }
+
+}
+
+/* tablet devices only please */
+@media screen and (max-width:1024px),(max-width:768px){
+    
+    @media (orientation:landscape){
+	#container {
+		padding:0
+	}
+    }
+
+    @media (orientation:portrait){
+	#container {
+		padding:0
+	}
+
+    }
+            #container {
+                    width:90%;
+                    margin: 0 5%;
+                    padding: 0;
+            }
+            header#primary-header, section#main, footer#primary-footer {
+
+            }
+            section#maincol {
+                width:100%;
+            }
+            section#secondcol {
+                width:100%;
+                clear:left;
+                margin-left: 0;
+            }
+            div#featured-area .widget {
+                    display:none;
+            }
+            div#featured-area .widget:first-child {   
+                    margin-right:2%;
+                    width: 49%;
+                    display:block;
+            }
+            div#featured-area .widget:nth-child(2) {
+                display:block;
+                margin-right:0;
+                width:49%;
+            }
+            h1#site-title {
+                    font-size:2em;
+                    line-height:1em;
+            }
+            h2#site-description {
+                    font-size: 1em;
+                    line-height:2em;
+            }
+}
+
+/* handheld devices only please */
+@media screen and (max-width:480px){
+    
+    @media (orientation:landscape){
+	#container {
+		padding:0
+	}
+    }
+
+    @media (orientation:portrait){
+	#container {
+		padding:0
+	}
+
+    }
+
+            #container {
+                    width:100%;
+                    margin: 0;
+                    padding: 0;
+            }
+            header#primary-header, section#main, footer#primary-footer {
+
+            }
+            section#main {
+                padding: 1%;
+            }
+            section#maincol {
+                width:100%;
+            }
+            section#secondcol {
+                width:100%;
+                clear:left;
+                margin-left: 0;
+            }
+            div#featured-area {
+                display:none;
+            }
+            div#featured-area .widget {
+                    display:none;
+            }
+            div#featured-area .widget:first-child {   
+                margin-right:0;
+                    width: 100%;
+                    display:block;
+            }
+            nav.header-primary {
+                display:none;
+            }
+            nav.header-primary ul li, nav.header-secondary ul li {
+                display:inline;
+                padding: .5em 1em;
+                margin: 0;
+                float:left;
+                width:100%;
+            }
+            nav.header-primary li:hover ul.sub-menu, nav.header-secondary li:hover ul.sub-menu{
+                display: none;
+            }
+
+            h1#site-title {
+                    width:100%;
+                    font-size:1em;
+                    padding: 1em;
+            }
+            h2#site-description {
+                    width:100%; display:none;
+            }
+            .meta .date {
+                clear:left;
+                display:block;
+            }
+}
+    

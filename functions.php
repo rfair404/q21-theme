@@ -1,11 +1,10 @@
 <?php 
 
 /* 
-* @package h5b
+* @package q21
 */
 
-
-require_once( dirname( __FILE__ ) . '/lib/h5b-initialize.php' );
+require_once( dirname( __FILE__ ) . '/lib/q21-initialize.php' );
 
 
 

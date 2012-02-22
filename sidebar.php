@@ -1,9 +1,18 @@
-<?php /*the sidebar files*/
+<?php 
 
-if ( function_exists('h5b_menu') ) h5b_menu('sidebar_primary', 'sidebar-primary'); 
+/* 
+* The Main Sidebar File
+* @package q21
+*/
+
 
 
 if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Global Sidebar') ) ; 
 
-
-if ( function_exists('h5b_menu') ) h5b_menu('sidebar_secondary', 'sidebar-secondary'); 
+if ( is_home() ) {
+	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Sidebar') ) ; 
+} elseif ( is_page() ) {
+	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Page Sidebar') ) ; 
+} else {
+	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) ; 
+}

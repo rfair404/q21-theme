@@ -2,8 +2,8 @@
 
 /*
 * The Category Template
-* @package h5b
+* @package q21
 * Maintain for WordPress theme structure compatability
 */
 
-h5b();
+q21();

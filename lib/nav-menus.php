@@ -1,8 +1,8 @@
 <?php 
 /*
 *Sets up the navigation menus
-* @package h5b
-* includes our 'descriptions' custom walker allowing menus to display item descriptions - e.g. <?php h5b_menu('header_primary', 'header-primary', 'descriptions'); ?>
+* @package q21
+* includes our 'descriptions' custom walker allowing menus to display item descriptions - e.g. <?php q21_menu('header_primary', 'header-primary', 'descriptions'); ?>
 */ 
 
 /*make our top nav menu */
@@ -30,7 +30,7 @@ register_nav_menus( array(
 'footer_secondary' => __( 'Footer Secondary', 'footer-secondary' ), )
 );
 
-function h5b_menu($menuid, $menuclass, $walker = null) {
+function q21_menu($menuid, $menuclass, $walker = null) {
 
 if ( function_exists('wp_nav_menu') ) {
 			if ( $walker == 'descriptions' ) $walker = new Show_Desc_Walker(); else $walker = null; 
